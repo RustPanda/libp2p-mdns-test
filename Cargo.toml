@@ -1,0 +1,18 @@
+[package]
+name = "p2p-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+
+tracing = {version = "0.1", features = ["log"]}
+tracing-subscriber = "0.2"
+log-panics = "2"
+
+libp2p-quic = {version = "0.6", features = ["tls"]}
+libp2p = {version = "0.39"}
+
+tokio = {version = "1", features = ["rt-multi-thread", "macros"]}
